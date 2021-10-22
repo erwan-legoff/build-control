@@ -9,7 +9,7 @@
 
 CREATE TABLE projet(
         id_projet   Int  Auto_increment  NOT NULL ,
-        nom_projet  Varchar (20) NOT NULL ,
+        nom_projet  Varchar (100) NOT NULL ,
         date_projet Date NOT NULL
 	,CONSTRAINT projet_PK PRIMARY KEY (id_projet)
 )ENGINE=InnoDB;
@@ -51,7 +51,7 @@ CREATE TABLE sousTraitant(
 CREATE TABLE capture(
         id_capture        Int  Auto_increment  NOT NULL ,
         url_capture       Varchar (500) NOT NULL ,
-        type_capture      Varchar (20) NOT NULL ,
+        type_capture      Varchar (100) NOT NULL ,
         date_capture      Date NOT NULL ,
         longitude_capture Float NOT NULL ,
         lattitude_capture Float NOT NULL ,
