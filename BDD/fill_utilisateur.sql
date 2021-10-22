@@ -1,0 +1,54 @@
+INSERT INTO `omni_vision`.`utilisateur`
+(`id_utilisateur`,
+`identifiant_utilisateur`,
+`nom_utilisateur`,
+`prenom_utilisateur`,
+`date_creation_utilisateur`,
+`bloque_utilisateur`,
+`mdp_hash_utilisateur`,
+`id_equipe`)
+VALUES
+(null,
+"I2019_MALA",
+"LAPLAGNE",
+"Marion Mélina",
+"2019-01-25",
+false,
+"I2019_MALA",
+1);
+INSERT INTO `omni_vision`.`utilisateur`
+(`id_utilisateur`,
+`identifiant_utilisateur`,
+`nom_utilisateur`,
+`prenom_utilisateur`,
+`date_creation_utilisateur`,
+`bloque_utilisateur`,
+`mdp_hash_utilisateur`,
+`id_equipe`)
+VALUES
+(null,
+"I2021_ADPI",
+"PIC",
+"Adrien",
+"2021-10-22",
+false,
+"I2021_ADPI",
+1);
+INSERT INTO `omni_vision`.`utilisateur`
+(`id_utilisateur`,
+`identifiant_utilisateur`,
+`nom_utilisateur`,
+`prenom_utilisateur`,
+`date_creation_utilisateur`,
+`bloque_utilisateur`,
+`mdp_hash_utilisateur`,
+`id_equipe`)
+VALUES
+(null,
+"I2020_ADLE",
+"LEGOFFRE",
+"Théo",
+"2020-08-13",
+false,
+"I2020_ADLE",
+1);
