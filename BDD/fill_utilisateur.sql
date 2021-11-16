@@ -1,4 +1,4 @@
-INSERT INTO `omni_vision`.`utilisateur`
+INSERT INTO `heroku_935686d78c71267`.`utilisateur`
 (`id_utilisateur`,
 `identifiant_utilisateur`,
 `nom_utilisateur`,
@@ -16,7 +16,7 @@ VALUES
 false,
 "I2019_MALA",
 1);
-INSERT INTO `omni_vision`.`utilisateur`
+INSERT INTO `heroku_935686d78c71267`.`utilisateur`
 (`id_utilisateur`,
 `identifiant_utilisateur`,
 `nom_utilisateur`,
@@ -34,7 +34,7 @@ VALUES
 false,
 "I2021_ADPI",
 1);
-INSERT INTO `omni_vision`.`utilisateur`
+INSERT INTO `heroku_935686d78c71267`.`utilisateur`
 (`id_utilisateur`,
 `identifiant_utilisateur`,
 `nom_utilisateur`,
