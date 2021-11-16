@@ -1,4 +1,4 @@
-INSERT INTO `omni_vision`.`soustraitant`
+INSERT INTO `heroku_935686d78c71267`.`soustraitant`
 (`id_sous_traitant`,
 `nom_sous_traitant`,
 `corps_metier_sous_traitant`)
@@ -7,7 +7,7 @@ VALUES
 "Pic SARL",
 "Carreleur");
 
-INSERT INTO `omni_vision`.`soustraitant`
+INSERT INTO `heroku_935686d78c71267`.`soustraitant`
 (`id_sous_traitant`,
 `nom_sous_traitant`,
 `corps_metier_sous_traitant`)
@@ -16,7 +16,7 @@ VALUES
 "EURL Silvert",
 "Maçon");
 
-INSERT INTO `omni_vision`.`soustraitant`
+INSERT INTO `heroku_935686d78c71267`.`soustraitant`
 (`id_sous_traitant`,
 `nom_sous_traitant`,
 `corps_metier_sous_traitant`)
@@ -25,7 +25,7 @@ VALUES
 "Tree Enterprise",
 "Menuisier");
 
-INSERT INTO `omni_vision`.`soustraitant`
+INSERT INTO `heroku_935686d78c71267`.`soustraitant`
 (`id_sous_traitant`,
 `nom_sous_traitant`,
 `corps_metier_sous_traitant`)
@@ -34,7 +34,7 @@ VALUES
 "Toi-ture",
 "Couvreur");
 
-INSERT INTO `omni_vision`.`soustraitant`
+INSERT INTO `heroku_935686d78c71267`.`soustraitant`
 (`id_sous_traitant`,
 `nom_sous_traitant`,
 `corps_metier_sous_traitant`)
