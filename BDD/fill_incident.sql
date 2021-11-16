@@ -1,4 +1,4 @@
-INSERT INTO `omni_vision`.`incident`
+INSERT INTO `heroku_935686d78c71267`.`incident`
 (`id_incident`,
 `nom_incident`,
 `description_incident`,
@@ -9,7 +9,7 @@ VALUES
 "Départ de feu sur la facade droite qui a été rapidement maitrisé",
 4);
 
-INSERT INTO `omni_vision`.`incident`
+INSERT INTO `heroku_935686d78c71267`.`incident`
 (`id_incident`,
 `nom_incident`,
 `description_incident`,
