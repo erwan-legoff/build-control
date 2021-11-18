@@ -2,6 +2,7 @@ package com.example.omnivisionapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,13 +24,15 @@ public class MainActivity extends AppCompatActivity {
         editLogin = (EditText) findViewById(R.id.editLoginConnect);
         editPassword = (EditText) findViewById(R.id.editPasswordConnect);
         textPrincipalLogin = (TextView) findViewById(R.id.textPrincipal);
-        textPrincipalLogin.setText("Saisissez vos informations :");
+        textPrincipalLogin.setText("Entrez vos identifiants :");
 
         clickButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editLogin.getText();
                 editPassword.getText();
+                Intent intent = new Intent(MainActivity.this, ListChantierActivity.class);
+                startActivity(intent);
             }
         });
     }
