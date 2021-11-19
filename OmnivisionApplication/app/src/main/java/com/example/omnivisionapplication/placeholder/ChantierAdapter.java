@@ -1,5 +1,7 @@
 package com.example.omnivisionapplication.placeholder;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,17 +12,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.omnivisionapplication.ModelOmniVision;
 import com.example.omnivisionapplication.R;
 
 import java.util.List;
 
 public class ChantierAdapter extends BaseAdapter {
-    private List<Chantier> listData;
-    private LayoutInflater layoutInflater;
-    private Context context;
+    private final List<ModelOmniVision.Chantier> chantierList;
+    private final LayoutInflater layoutInflater;
+    private final Context context;
 
-    public ChantierAdapter(Context context, List<Chantier> listData) {
-        this.listData = listData;
+    public ChantierAdapter(Context context, List<ModelOmniVision.Chantier> chantierList) {
+        this.chantierList = chantierList;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
     }
@@ -28,12 +31,12 @@ public class ChantierAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return listData.size();
+        return chantierList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return listData.get(position);
+        return chantierList.get(position);
     }
 
     @Override
@@ -47,36 +50,50 @@ public class ChantierAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.chantier_template, null);
             holder = new ViewHolder();
-            holder.imageChantier1 = (ImageView) convertView.findViewById(R.id.imgincident);
-            holder.nomChantier1 = (TextView) convertView.findViewById(R.id.nom_incident);
-            holder.graviteChantier1 = (TextView) convertView.findViewById(R.id.gravite_incident);
+
+            holder.imageIncident = (ImageView) convertView.findViewById(R.id.imageChantier);
+            holder.nomChantier1 = (TextView) convertView.findViewById(R.id.nomChantier);
+            holder.graviteIncident = (TextView) convertView.findViewById(R.id.graviteIncident);
+            holder.nomIncident = (TextView) convertView.findViewById(R.id.nomIncident);
+            holder.descriptionIncident = (TextView) convertView.findViewById(R.id.descriptionIncident);
+
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Chantier chantier = this.listData.get(position);
+        ModelOmniVision.Chantier chantier = this.chantierList.get(position);
+        Log.e(TAG, "getView: TAILLE LAST INCIDENT"+ chantier.getIncidents().size());
+        ModelOmniVision.Chantier.Incident lastIncident = chantier.getIncidents().get(0);
         holder.nomChantier1.setText(chantier.getNom_chantier());
-        holder.graviteChantier1.setText(chantier.getImgPathString());
+        holder.graviteIncident.setText(String.valueOf(lastIncident.getGravite_incident()));
+        holder.descriptionIncident.setText(lastIncident.getDescription_incident());
+        holder.nomIncident.setText(lastIncident.getNom_incident());
+        int imageId = this.getMipmapResIdByName(lastIncident.getUrl_capture());
 
-        int imageId = this.getMipmapResIdByName(chantier.getImgPathString());
-
-        holder.imageChantier1.setImageResource(imageId);
+        holder.imageIncident.setImageResource(imageId);
 
         return convertView;
     }
 
+    /**
+     * Utilisée pour récupérer l'id à partir du nom de l'image
+     * @param resName
+     * @return
+     */
     public int getMipmapResIdByName(String resName)  {
         String pkgName = context.getPackageName();
         // Return 0 if not found.
         int resID = context.getResources().getIdentifier(resName , "mipmap", pkgName);
-        Log.i("CustomListView", "Res Name: "+ resName+"==> Res ID = "+ resID);
+        Log.e("CustomListView", "Res Name: "+ resName+"==> Res ID = "+ resID);
         return resID;
     }
 
     static class ViewHolder {
-        ImageView imageChantier1;
+        ImageView imageIncident;
         TextView nomChantier1;
-        TextView graviteChantier1;
+        TextView descriptionIncident;
+        TextView nomIncident;
+        TextView graviteIncident;
     }
 }
