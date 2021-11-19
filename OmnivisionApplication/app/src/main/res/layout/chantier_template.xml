@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/descriptionIncident"
+        android:id="@+id/nomIncident"
         android:layout_width="139dp"
         android:layout_height="21dp"
         android:layout_marginStart="8dp"
@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/graviteChantier"
+        android:id="@+id/graviteIncident"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -56,14 +56,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="5"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionIncident"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/descriptionIncident"
+        app:layout_constraintStart_toEndOf="@+id/nomIncident"
         app:layout_constraintTop_toBottomOf="@+id/nomChantier" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/descriptionIncident"
         android:layout_width="0dp"
         android:layout_height="33dp"
         android:layout_marginStart="8dp"
@@ -74,6 +74,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageChantier"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionIncident" />
+        app:layout_constraintTop_toBottomOf="@+id/nomIncident" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
