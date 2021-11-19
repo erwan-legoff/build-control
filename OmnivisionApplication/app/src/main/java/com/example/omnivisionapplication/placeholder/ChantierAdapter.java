@@ -57,7 +57,7 @@ public class ChantierAdapter extends BaseAdapter {
 
         Chantier chantier = this.listData.get(position);
         holder.nomChantier1.setText(chantier.getNom_chantier());
-        holder.graviteChantier1.setText("gravite: " + chantier.getImgPathString());
+        holder.graviteChantier1.setText(chantier.getImgPathString());
 
         int imageId = this.getMipmapResIdByName(chantier.getImgPathString());
 
