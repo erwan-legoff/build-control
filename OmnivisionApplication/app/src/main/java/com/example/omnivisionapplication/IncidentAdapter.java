@@ -1,4 +1,4 @@
-package com.example.omnivisionapplication.placeholder;
+package com.example.omnivisionapplication;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,12 +14,14 @@ import com.example.omnivisionapplication.R;
 
 import java.util.List;
 
-public class ChantierAdapter extends BaseAdapter {
-    private List<Chantier> listData;
+public class IncidentAdapter extends BaseAdapter {
+
+
+    private List<Incident> listData;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public ChantierAdapter(Context context, List<Chantier> listData) {
+    public IncidentAdapter(Context context, List<Incident> listData) {
         this.listData = listData;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
@@ -45,23 +47,27 @@ public class ChantierAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.chantier_template, null);
+            convertView = layoutInflater.inflate(R.layout.incident_template, null);
             holder = new ViewHolder();
-            holder.imageChantier1 = (ImageView) convertView.findViewById(R.id.imgincident);
-            holder.nomChantier1 = (TextView) convertView.findViewById(R.id.nom_incident);
-            holder.graviteChantier1 = (TextView) convertView.findViewById(R.id.gravite_incident);
+            holder.imageIncident = (ImageView) convertView.findViewById(R.id.imgincident);
+            holder.nomIncident = (TextView) convertView.findViewById(R.id.nom_incident);
+            holder.graviteIncident = (TextView) convertView.findViewById(R.id.gravite_incident);
+            holder.descriptionIncident = (TextView) convertView.findViewById(R.id.description_incident);
+            holder.dateIncident = (TextView) convertView.findViewById(R.id.date_incident);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Chantier chantier = this.listData.get(position);
-        holder.nomChantier1.setText(chantier.getNom_chantier());
-        holder.graviteChantier1.setText(chantier.getImgPathString());
+        Incident incident = this.listData.get(position);
+        holder.nomIncident.setText(incident.getNomIncident());
+        holder.graviteIncident.setText(String.valueOf(incident.getGraviteIncident()));
+        holder.descriptionIncident.setText(incident.getDescriptionIncident());
+        holder.dateIncident.setText(incident.getDateCapture());
 
-        int imageId = this.getMipmapResIdByName(chantier.getImgPathString());
+        int imageId = this.getMipmapResIdByName(incident.getNomCapture());
 
-        holder.imageChantier1.setImageResource(imageId);
+        holder.imageIncident.setImageResource(imageId);
 
         return convertView;
     }
@@ -75,8 +81,10 @@ public class ChantierAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        ImageView imageChantier1;
-        TextView nomChantier1;
-        TextView graviteChantier1;
+        ImageView imageIncident;
+        TextView nomIncident;
+        TextView graviteIncident;
+        TextView descriptionIncident;
+        TextView dateIncident;
     }
 }

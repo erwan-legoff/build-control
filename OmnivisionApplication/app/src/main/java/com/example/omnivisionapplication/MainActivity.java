@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         clickButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editLogin.getText();
-                editPassword.getText();
-                Intent intent = new Intent(MainActivity.this, ListChantierActivity.class);
-                startActivity(intent);
+
+                    Intent intent = new Intent(MainActivity.this, ListChantierActivity.class);
+                    startActivity(intent);
+
             }
         });
     }
