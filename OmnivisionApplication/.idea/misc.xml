@@ -3,18 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+=======
         <entry key="..\:/Users/erwan.legoff/Documents/MSPR2/build-control/OmnivisionApplication/app/src/main/res/layout/activity_list_chantier.xml" value="0.35643115942028986" />
         <entry key="..\:/Users/erwan.legoff/Documents/MSPR2/build-control/OmnivisionApplication/app/src/main/res/layout/activity_main.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/erwan.legoff/Documents/MSPR2/build-control/OmnivisionApplication/app/src/main/res/layout/chantier_template.xml" value="0.35643115942028986" />
+>>>>>>> 1ed151ad0385a137a81d2bd58dc20ab500af0625
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2640625" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2640625" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout-sw600dp/fragment_chantier_detail.xml" value="0.24609375" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/activity_chantier_detail.xml" value="0.328125" />
+        <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/activity_detail_chantier.xml" value="0.684954280964256" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/activity_list_chantier.xml" value="0.264" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/chantier_list_content.xml" value="0.328125" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/chantier_template.xml" value="0.5042735042735043" />
         <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/fragment_chantier_detail.xml" value="0.29583333333333334" />
+<<<<<<< HEAD
+        <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/incident_template.xml" value="0.536" />
+        <entry key="..\:/Users/theo.pic/Documents/GitHub/build-control/OmnivisionApplication/app/src/main/res/layout/incidents_template.xml" value="0.72" />
+=======
+>>>>>>> 1ed151ad0385a137a81d2bd58dc20ab500af0625
       </map>
     </option>
   </component>
@@ -23,5 +32,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.4125905797101449" />
+      </ProjectState>
+    </option>
   </component>
 </project>

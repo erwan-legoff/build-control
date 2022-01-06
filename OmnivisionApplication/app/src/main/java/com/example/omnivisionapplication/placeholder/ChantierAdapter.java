@@ -50,11 +50,13 @@ public class ChantierAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.chantier_template, null);
             holder = new ViewHolder();
+
             holder.imageIncident = (ImageView) convertView.findViewById(R.id.imageChantier);
             holder.nomChantier1 = (TextView) convertView.findViewById(R.id.nomChantier);
             holder.graviteIncident = (TextView) convertView.findViewById(R.id.graviteIncident);
             holder.nomIncident = (TextView) convertView.findViewById(R.id.nomIncident);
             holder.descriptionIncident = (TextView) convertView.findViewById(R.id.descriptionIncident);
+
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

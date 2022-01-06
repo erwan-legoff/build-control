@@ -4,6 +4,7 @@ import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.omnivisionapplication.placeholder.Chantier;
 import com.example.omnivisionapplication.placeholder.ChantierAdapter;
 
 import java.util.ArrayList;
@@ -64,6 +66,8 @@ public class ListChantierActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Object o = listView.getItemAtPosition(position);
+                Intent intent2 = new Intent(ListChantierActivity.this, DetailChantierActivity.class);
+                startActivity(intent2);
                 ModelOmniVision.Chantier chantier = (ModelOmniVision.Chantier) o;
                 Toast.makeText(ListChantierActivity.this, "Selected :" + " " + chantier, Toast.LENGTH_LONG).show();
             }
