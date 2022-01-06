@@ -62,14 +62,17 @@ public class ChantierAdapter extends BaseAdapter {
 
         ModelOmniVision.Chantier chantier = this.chantierList.get(position);
         Log.e(TAG, "getView: TAILLE LAST INCIDENT"+ chantier.getIncidents().size());
-        ModelOmniVision.Chantier.Incident lastIncident = chantier.getIncidents().get(0);
-        holder.nomChantier1.setText(chantier.getNom_chantier());
-        holder.graviteIncident.setText(String.valueOf(lastIncident.getGravite_incident()));
-        holder.descriptionIncident.setText(lastIncident.getDescription_incident());
-        holder.nomIncident.setText(lastIncident.getNom_incident());
-        int imageId = this.getMipmapResIdByName(lastIncident.getUrl_capture());
+        if(chantier.getIncidents().size() > 0){
+            ModelOmniVision.Chantier.Incident lastIncident = chantier.getIncidents().get(0);
+            holder.nomChantier1.setText(chantier.getNom_chantier());
+            holder.graviteIncident.setText(String.valueOf(lastIncident.getGravite_incident()));
+            holder.descriptionIncident.setText(lastIncident.getDescription_incident());
+            holder.nomIncident.setText(lastIncident.getNom_incident());
+            int imageId = this.getMipmapResIdByName(lastIncident.getUrl_capture());
+            holder.imageIncident.setImageResource(imageId);
+        }
 
-        holder.imageIncident.setImageResource(imageId);
+
 
         return convertView;
     }

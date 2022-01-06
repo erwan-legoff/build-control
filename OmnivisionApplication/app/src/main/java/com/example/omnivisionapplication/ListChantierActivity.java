@@ -29,18 +29,13 @@ public class ListChantierActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_chantier);
-        ArrayList<ModelOmniVision.Chantier> list = new ArrayList<>();
+
         call.enqueue(new Callback<ModelOmniVision>() {
             @Override
             public void onResponse(Call<ModelOmniVision> call, retrofit2.Response<ModelOmniVision> responseOmniVision) {
-                Log.e(TAG, "onResponse: AVANT IS EXECUTED  = " + call.isExecuted() );
-                Log.e(TAG, "onResponse: APRES getChantier IS EXECUTED  = " + call.isExecuted() );
-                Log.e("On Response", "LISTE -------------------------> : "+ list.size());
+
                 List<ModelOmniVision.Chantier> listChantier = responseOmniVision.body().getChantiers();
-                if(listChantier == null){
-                    Log.e(TAG, "onResponse: ERREUR la liste chantier est null" );
-                }else{
-                    Log.e(TAG, "onResponse: LA LISTE CHANTIER N'EST PAS null YOUHOU !!! sa taille est de " + listChantier.size() );
+                if(listChantier != null && !listChantier.isEmpty()){
                     createListView(listChantier);
                 }
 
